@@ -87,6 +87,14 @@
   position: relative;
 }
 
+.monaco-workbench .activitybar>.content .monaco-action-bar .checked .action-label {
+  background: linear-gradient(to bottom, #ff52f1, #ff53ff) !important;
+}
+
+.monaco-workbench .activitybar>.content .monaco-action-bar .action-label {
+  background: linear-gradient(to bottom, #fc28a8, #7603f9) !important;
+}
+
 .monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked::after {
   content: '';
   position: absolute;
