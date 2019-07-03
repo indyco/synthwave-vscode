@@ -1,11 +1,11 @@
 
 .mtk3 {
   color: #f92aad;
-  text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+  text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff6;
 }
 
 .mtk4 {
-  color: #6d77b3;
+  color: hsl(#6d77b3);
 }
 
 .mtk5 {
@@ -14,31 +14,31 @@
 
 .mtk6 {
   color: #fdfdfd;
-  text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
+  text-shadow: 0 0 2px #001716, 0 0 3px #03edf9, 0 0 5px #03edf9, 0 0 10px #03edf9;
 }
 
 .mtk7 {
   color: #fff5f6;
-  text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c75, 0 0 5px #fc1f2c75, 0 0 25px #fc1f2c75;
+  text-shadow: 0 0 2px #000, 0 0 10px #fc1f2c, 0 0 5px #fc1f2c, 0 0 25px #fc1f2c;
 }
 
 .mtk8 {
   color: #72f1b8;
-  text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
+  text-shadow: 0 0 2px #100c0f, 0 0 10px #257c55, 0 0 35px #212724;
 }
 
 .mtk9 {
-  color: #f4eee4;
-  text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+  color: #fffcf7;
+  text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 10px #f39f05, 0 0 2px #f39f05;
 }
 
 .monaco-editor .margin, .monaco-editor .inputarea.ime-input {
-  background: transparent;
+  background: #101010 !important;
 }
 
 /* Add the subtle gradient to the editor background */
-.monaco-editor {
-  background-color: transparent !important;
+.monaco-editor-background {
+  background-color: #000000 !important;
   background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
   background-size: auto 100vh;
   background-position: top;
@@ -68,7 +68,6 @@
   opacity: 1;
   z-index: 6;
 }
-
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit::after {
   content: '';
   position: absolute;
@@ -81,20 +80,23 @@
   z-index: 6;
 }
 
-/* Active sidebar item */
+/* Color gradient for selected sidebar item */
+.monaco-workbench .activitybar>.content .monaco-action-bar .checked .action-label {
+  background: linear-gradient(to bottom, #ff52f1, #ff53ff) !important;
+}
+
+/* Color gradient for all sidebar items */
+.monaco-workbench .activitybar>.content .monaco-action-bar .action-label {
+  background: linear-gradient(to bottom, #fc28a8, #7603f9) !important;
+}
+
+/* Active sidebar item background */
 .monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked {
   box-shadow: inset 0 -5px 25px #fc28a825;
   position: relative;
 }
 
-.monaco-workbench .activitybar>.content .monaco-action-bar .checked .action-label {
-  background: linear-gradient(to bottom, #ff52f1, #ff53ff) !important;
-}
-
-.monaco-workbench .activitybar>.content .monaco-action-bar .action-label {
-  background: linear-gradient(to bottom, #fc28a8, #7603f9) !important;
-}
-
+/* Active sidebar item color bar */
 .monaco-workbench .activitybar>.content .monaco-action-bar .action-item.checked::after {
   content: '';
   position: absolute;
@@ -105,7 +107,6 @@
   background: linear-gradient(to bottom, #fc28a8, #03edf9) !important;
   opacity: 1;
 }
-
 .monaco-workbench .activitybar>.content .monaco-action-bar .action-item::after {
   content: '';
   position: absolute;
